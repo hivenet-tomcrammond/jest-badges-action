@@ -5,7 +5,10 @@ import { getCurrentBranch } from '../github/getCurrentBranch';
 export const isBranchValidForBadgesGeneration = (): boolean => {
   const currentBranch = getCurrentBranch();
   if (!currentBranch) {
-    error(`🔶 Unable to get current branch from github event.`);
+    error(
+      `🔶 Unable to get current branch from github event. currentBranch is: ${currentBranch}`,
+    );
+
     return false;
   }
 
