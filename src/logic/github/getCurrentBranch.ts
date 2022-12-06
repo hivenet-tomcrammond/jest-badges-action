@@ -12,7 +12,8 @@ export const getCurrentBranch = (): string | undefined => {
       }),
     );
   } catch (err) {
-    error(`🔹 Getting path failed: ${err}`);
+    error(`🔹 Getting path failed`);
+    error(`🔹 ${err}`);
     return undefined;
   }
 
